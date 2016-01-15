@@ -36,7 +36,5 @@ namespace ContactList
     {
       contacts.Clear();
     }
-
-
   }
 }
