@@ -47,6 +47,7 @@ namespace ContactList
       return contacts[id-1];
     }
 
+    //this method is not currently working, have to find out why. here or in HomeModule.cs?
     public static void DeleteAll()
     {
       contacts.Clear();
