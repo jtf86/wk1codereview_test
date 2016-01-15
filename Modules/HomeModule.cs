@@ -9,8 +9,12 @@ namespace ContactList
     public HomeModule()
     {
       //routes go here
-      Get["/"] =_=> {
+      Get["/"] = _ => {
         return View["index.cshtml"];
+      };
+      Get["/contacts"] = _ => {
+        var AllContacts = Contact.All();
+        return View["contacts.cshtml", AllContacts];
       };
     }
   }
