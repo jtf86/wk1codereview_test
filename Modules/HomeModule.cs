@@ -16,6 +16,9 @@ namespace ContactList
         var AllContacts = Contact.All();
         return View["contacts.cshtml", AllContacts];
       };
+      Get["/contacts/new"] = _ => {
+        return View["contact_form.cshtml"];
+      };
     }
   }
 }
