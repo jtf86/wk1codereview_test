@@ -1,4 +1,4 @@
-namespace MadLibs
+namespace CodeReview
 {
   using System.IO;
   using Microsoft.AspNet.Builder;
