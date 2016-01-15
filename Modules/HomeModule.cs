@@ -9,6 +9,9 @@ namespace ContactList
     public HomeModule()
     {
       //routes go here
+      Get["/"] =_=> {
+        return View["index.cshtml"];
+      };
     }
   }
 }
