@@ -22,6 +22,21 @@ namespace ContactList
       id = contacts.Count;
     }
 
+    public string GetName()
+    {
+      return name;
+    }
+
+    public string GetPhoneNumber()
+    {
+      return phoneNumber;
+    }
+
+    public string GetAddress()
+    {
+      return address;
+    }
+
     public static List<Contact> All()
     {
       return contacts;
