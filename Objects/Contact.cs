@@ -50,6 +50,11 @@ namespace ContactList
       return _contacts;
     }
 
+    public void Save()
+    {
+      _contacts.Add(this);
+    }
+
     //this method is not currently working, have to find out why. here or in HomeModule.cs?
     public static void DeleteAll()
     {
