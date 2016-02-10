@@ -6,12 +6,14 @@
   }
   @foreach (var contact in Model) {
     <ul>
-      <li><h3>@contact.GetName()</h3></li>
-      <li><h3>@contact.GetPhoneNumber()</h3></li>
-      <li><h3>@contact.GetAddress()</h3></li>
+      <hr>
+      <h3>@contact.GetName()</h3>
+      <li>@contact.GetPhoneNumber()</li>
+      <li>@contact.GetAddress()</li>
       <hr>
     </ul>
   }
+  <hr>
   <p><a href="/">Back home</a></p>
   <h4><a href="/contacts/new">Add a contact</a></h4>
   <br>

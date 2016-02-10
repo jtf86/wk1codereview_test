@@ -13,7 +13,7 @@ namespace ContactList
         return View["index.cshtml"];
       };
       Get["/contacts"] = _ => {
-        var allContacts = Contact.All();
+        var allContacts = Contact.GetAll();
         return View["contacts.cshtml", allContacts];
       };
       Get["/contacts/new"] = _ => {
