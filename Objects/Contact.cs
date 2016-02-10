@@ -6,43 +6,42 @@ namespace ContactList
 
   public class Contact
   {
-    private string name { get; set; }
-    private string phoneNumber { get; set; }
-    private string address { get; set; }
-
-    private static List<Contact> contacts = new List<Contact> {};
+    private string _name { get; set; }
+    private string _phoneNumber { get; set; }
+    private string _address { get; set; }
+    private static List<Contact> _contacts = new List<Contact> {};
 
     public Contact(string new_name, string new_phoneNumber, string new_address)
     {
-      name = new_name;
-      phoneNumber = new_phoneNumber;
-      address = new_address;
+      _name = new_name;
+      _phoneNumber = new_phoneNumber;
+      _address = new_address;
     }
 
     public string GetName()
     {
-      return name;
+      return _name;
     }
 
     public string GetPhoneNumber()
     {
-      return phoneNumber;
+      return _phoneNumber;
     }
 
     public string GetAddress()
     {
-      return address;
+      return _address;
     }
 
     public static List<Contact> All()
     {
-      return contacts;
+      return _contacts;
     }
 
     //this method is not currently working, have to find out why. here or in HomeModule.cs?
     public static void DeleteAll()
     {
-      contacts.Clear();
+      _contacts.Clear();
     }
   }
 }
