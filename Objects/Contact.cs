@@ -45,7 +45,7 @@ namespace ContactList
       _address = newAddress;
     }
 
-    public static List<Contact> All()
+    public static List<Contact> GetAll()
     {
       return _contacts;
     }
