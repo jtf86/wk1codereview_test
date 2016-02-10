@@ -24,8 +24,8 @@ namespace ContactList
         var phoneNumber = Request.Form["contact-phone-number"];
         var address = Request.Form["contact-address"];
         var newContact = new Contact(name, phoneNumber, address);
-        var allContacts = Contact.All();
-        return View["contacts.cshtml", allContacts];
+        newContact.Save();
+        return View["contact_created.cshtml", newContact];
       };
       Post["/contacts_cleared"] = _ => {
         Contact.DeleteAll();
