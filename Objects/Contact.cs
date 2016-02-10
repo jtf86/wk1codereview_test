@@ -22,15 +22,27 @@ namespace ContactList
     {
       return _name;
     }
+    public void SetName(string newName)
+    {
+      _name = newName;
+    }
 
     public string GetPhoneNumber()
     {
       return _phoneNumber;
     }
+    public void SetPhoneNumber(string newPhoneNumber)
+    {
+      _phoneNumber = newPhoneNumber;
+    }
 
     public string GetAddress()
     {
       return _address;
+    }
+    public void SetAddress(string newAddress)
+    {
+      _address = newAddress;
     }
 
     public static List<Contact> All()
