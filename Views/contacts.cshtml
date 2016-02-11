@@ -6,18 +6,15 @@
 }
 @foreach (var contact in Model)
 {
-  <ul>
-    <hr>
+  <hr>
     <h3>@contact.GetName()</h3>
-    <li>@contact.GetPhoneNumber()</li>
-    <li>@contact.GetAddress()</li>
-    <hr>
-  </ul>
+    <p>@contact.GetPhoneNumber()</p>
+    <p>@contact.GetAddress()</p>
+  <hr>
 }
 <hr>
 <p><a href="/">Back home</a></p>
-<h4><a href="/contacts/new">Add a contact</a></h4>
-<br>
+<p><a href="/contacts/new">Add a contact</a></p>
 <form action="/contacts_cleared" method="post">
   <button type="submit">Delete all contacts</button>
 </form>
