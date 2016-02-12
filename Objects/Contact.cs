@@ -6,51 +6,59 @@ namespace ContactList
 
   public class Contact
   {
-    private string name { get; set; }
-    private string phoneNumber { get; set; }
-    private string address { get; set; }
-    private int id { get; set; }
-
-    private static List<Contact> contacts = new List<Contact> {};
+    private string _name { get; set; }
+    private string _phoneNumber { get; set; }
+    private string _address { get; set; }
+    private static List<Contact> _contacts = new List<Contact> {};
 
     public Contact(string new_name, string new_phoneNumber, string new_address)
     {
-      name = new_name;
-      phoneNumber = new_phoneNumber;
-      address = new_address;
-      contacts.Add(this);
-      id = contacts.Count;
+      _name = new_name;
+      _phoneNumber = new_phoneNumber;
+      _address = new_address;
     }
 
     public string GetName()
     {
-      return name;
+      return _name;
+    }
+    public void SetName(string newName)
+    {
+      _name = newName;
     }
 
     public string GetPhoneNumber()
     {
-      return phoneNumber;
+      return _phoneNumber;
+    }
+    public void SetPhoneNumber(string newPhoneNumber)
+    {
+      _phoneNumber = newPhoneNumber;
     }
 
     public string GetAddress()
     {
-      return address;
+      return _address;
+    }
+    public void SetAddress(string newAddress)
+    {
+      _address = newAddress;
     }
 
-    public static List<Contact> All()
+    public static List<Contact> GetAll()
     {
-      return contacts;
+      return _contacts;
     }
 
-    public static Contact Find(int id)
+    public void Save()
     {
-      return contacts[id-1];
+      _contacts.Add(this);
     }
 
     //this method is not currently working, have to find out why. here or in HomeModule.cs?
     public static void DeleteAll()
     {
-      contacts.Clear();
+      _contacts.Clear();
     }
   }
 }
